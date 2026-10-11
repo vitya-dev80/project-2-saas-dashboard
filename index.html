@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaaS Analytics Dashboard</title>
+  <script type="module" crossorigin src="/project-2-saas-dashboard/assets/index-BwxoiWOT.js"></script>
+  <link rel="stylesheet" crossorigin href="/project-2-saas-dashboard/assets/index-XsKrl-wi.css">
+</head>
+<body>
+  <div class="dashboard-layout">
+    <!-- Боковое меню -->
+    <aside class="sidebar">
+      <div class="brand">⚡ SaaSify</div>
+      <nav class="nav-menu">
+        <button class="nav-item active" data-tab="overview">📊 Огляд</button>
+        <button class="nav-item" data-tab="analytics">📈 Аналітика</button>
+        <button class="nav-item" data-tab="customers">👥 Клієнти</button>
+        <button class="nav-item" data-tab="settings">⚙️ Налаштування</button>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle-btn">🌙 Темна тема</button>
+    </aside>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+      <header class="top-header">
+        <h1 id="page-title">Панель аналітики</h1>
+        <div class="user-profile">(Admin)</div>
+      </header>
+
+      <!-- Вкладка 1: Огляд -->
+      <div id="tab-overview" class="tab-content active">
+        <section class="kpi-grid">
+          <div class="kpi-card">
+            <span class="kpi-title">Загальний дохід</span>
+            <div class="kpi-value">₴124,500</div>
+            <span class="kpi-change positive">+14.2% за місяць</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-title">Активні підписки</span>
+            <div class="kpi-value">1,420</div>
+            <span class="kpi-change positive">+8.1% за місяць</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-title">Конверсія</span>
+            <div class="kpi-value">3.8%</div>
+            <span class="kpi-change negative">-0.4% за місяць</span>
+          </div>
+        </section>
+
+        <section class="charts-grid">
+          <div class="chart-card">
+            <h3>Динаміка доходів (2026)</h3>
+            <canvas id="revenueChart"></canvas>
+          </div>
+          <div class="chart-card">
+            <h3>Джерела трафіку</h3>
+            <canvas id="trafficChart"></canvas>
+          </div>
+        </section>
+      </div>
+
+      <!-- Вкладка 2: Аналитика -->
+      <div id="tab-analytics" class="tab-content" style="display: none;">
+        <div class="chart-card">
+          <h3>Детальний звіт по продажах</h3>
+          <p style="margin-top: 10px; color: var(--text-secondary);">Звіт за поточний місяць сформовано успішно.</p>
+        </div>
+      </div>
+
+      <!-- Вкладка 3: Клиенты -->
+      <div id="tab-customers" class="tab-content" style="display: none;">
+        <div class="chart-card">
+          <h3>Список активних користувачів</h3>
+          <p style="margin-top: 10px; color: var(--text-secondary);">Всього клієнтів: 1,420</p>
+        </div>
+      </div>
+
+      <!-- Вкладка 4: Настройки -->
+      <div id="tab-settings" class="tab-content" style="display: none;">
+        <div class="chart-card">
+          <h3>Налаштування профілю</h3>
+          <p style="margin-top: 10px; color: var(--text-secondary);">Управління сповіщеннями та безпекою акаунта.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
